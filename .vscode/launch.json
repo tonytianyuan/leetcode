@@ -8,7 +8,7 @@
     "name": "c/c++ Launch",
     "type": "cppdbg",
     "request": "launch",
-    "program": "${workspaceFolder}/build/main",
+    "program": "${workspaceFolder}/build/LongestCommonSequence",
     "args": [],
     "stopAtEntry": false,
     "cwd": "${workspaceFolder}",
