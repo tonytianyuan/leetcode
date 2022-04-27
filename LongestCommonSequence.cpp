@@ -39,7 +39,7 @@ public:
         #endif
     }
 };
-
+#if 0
 int main()
 {
     Solution sol;
@@ -54,3 +54,4 @@ int main()
     cout<<comLen<<endl;
     
 }
+#endif
