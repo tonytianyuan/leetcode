@@ -20,7 +20,7 @@ public:
         return maxValue;
     }
 };
-
+#if 0
 int main()
 {
     Solution sol;
@@ -31,3 +31,4 @@ int main()
 
     cout<<a<<endl;
 }
+#endif
