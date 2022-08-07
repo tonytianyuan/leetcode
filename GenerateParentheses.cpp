@@ -26,7 +26,7 @@ public:
         return c;
     }
 };
-
+#if 0
 int main()
 {
     Solution sol;
@@ -40,3 +40,4 @@ int main()
     cout<<endl;
     
 }
+#endif
