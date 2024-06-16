@@ -17,7 +17,7 @@ public:
         return n;
     }
 };
-#if 1
+#if 0
 int main()
 {
     Solution sol;
