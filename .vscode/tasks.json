@@ -1,28 +1,29 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-      {
-        "type": "shell",
-        "label": "clang++ build active file",
-        "command": "/usr/bin/clang++",
-        "args": [
-          "-std=c++17",
-          "-stdlib=libc++",
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}/build/${fileBasenameNoExtension}"
-        ],
-        "options": {
-          "cwd": "${workspaceFolder}"
+        {
+            "label": "build and run",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g", 
+                "${file}",          // 当前打开的文件
+                "-o", 
+                "${workspaceFolder}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compile the current file with g++",
+            "dependsOn": ["run"]
         },
-        "problemMatcher": ["$gcc"],
-        "group": {
-          "kind": "build",
-          "isDefault": true
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "dependsOn": []
         }
-      }
     ]
-  }
+}

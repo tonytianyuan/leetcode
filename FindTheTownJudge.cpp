@@ -40,7 +40,7 @@ private:
     vector<int> countTrust = vector<int> (1000,1);
 };
 #endif
-#if 1
+#if 0
 int main()
 {
     Solution sol;
